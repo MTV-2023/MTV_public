@@ -1,0 +1,19 @@
+a = int(input('Введите количество билетов '))
+i = 1
+summa = 0
+while a >= i:
+    print('Посетитель', i, ':')
+    age = int(input('Введите возраст посетителя '))
+    if age < 18:
+        price = 0
+    elif 18 <= age < 25:
+        price = 990
+    else:
+        price = 1390
+    summa += price
+    i += 1
+
+if i > 3:
+    print('Общая стоимость билетов со скидкой равна ', summa*0.9, 'руб.')
+else:
+    print('Общая стоимость билетов равна ', summa, 'руб.')
